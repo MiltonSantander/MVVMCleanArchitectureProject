@@ -15,6 +15,7 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        buildConfigField("String", "API_KEY", "\"TMDB_API_KEY}\"")
     }
 
     buildTypes {
@@ -34,6 +35,7 @@ android {
         jvmTarget = "1.8"
     }
     dataBinding { enable = true }
+    buildFeatures { buildConfig = true }
 }
 
 dependencies {
