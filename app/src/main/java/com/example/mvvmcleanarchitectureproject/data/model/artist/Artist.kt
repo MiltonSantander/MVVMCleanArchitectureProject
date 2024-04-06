@@ -1,4 +1,4 @@
-package com.example.mvvmcleanarchitectureproject.data
+package com.example.mvvmcleanarchitectureproject.data.model.artist
 
 
 import com.google.gson.annotations.SerializedName

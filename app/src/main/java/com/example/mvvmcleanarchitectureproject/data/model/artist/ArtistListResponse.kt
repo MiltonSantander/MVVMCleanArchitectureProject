@@ -1,14 +1,13 @@
-package com.example.mvvmcleanarchitectureproject.data
+package com.example.mvvmcleanarchitectureproject.data.model.artist
 
 
-import com.example.mvvmcleanarchitectureproject.data.Movie
 import com.google.gson.annotations.SerializedName
 
-data class MovieListResponse(
+data class ArtistListResponse(
     @SerializedName("page")
     val page: Int,
     @SerializedName("results")
-    val movieList: List<Movie>,
+    val artistList: List<Artist>,
     @SerializedName("total_pages")
     val totalPages: Int,
     @SerializedName("total_results")
