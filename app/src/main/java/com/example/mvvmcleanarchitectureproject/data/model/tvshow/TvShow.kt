@@ -1,8 +1,11 @@
 package com.example.mvvmcleanarchitectureproject.data.model.tvshow
 
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
 
+@Entity(tableName = "popular_tvshow")
 data class TvShow(
     @SerializedName("adult")
     val adult: Boolean?,
@@ -12,6 +15,7 @@ data class TvShow(
     val firstAirDate: String?,
     @SerializedName("genre_ids")
     val genreIds: List<Int>?,
+    @PrimaryKey
     @SerializedName("id")
     val id: Int?,
     @SerializedName("name")
