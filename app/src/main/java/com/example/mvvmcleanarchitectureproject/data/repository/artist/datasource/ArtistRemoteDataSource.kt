@@ -1,4 +1,4 @@
-package com.example.mvvmcleanarchitectureproject.data.repository.artist
+package com.example.mvvmcleanarchitectureproject.data.repository.artist.datasource
 
 import com.example.mvvmcleanarchitectureproject.data.model.artist.ArtistListResponse
 import retrofit2.Response

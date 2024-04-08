@@ -1,6 +1,7 @@
-package com.example.mvvmcleanarchitectureproject.data.repository.movie
+package com.example.mvvmcleanarchitectureproject.data.repository.movie.datasourceimplementation
 
 import com.example.mvvmcleanarchitectureproject.data.model.movie.Movie
+import com.example.mvvmcleanarchitectureproject.data.repository.movie.datasource.MovieCacheDataSource
 
 class MovieCacheDataSourceImplementation : MovieCacheDataSource {
     private var movieList = ArrayList<Movie>()

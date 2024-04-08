@@ -1,4 +1,4 @@
-package com.example.mvvmcleanarchitectureproject.data.repository.tvshow
+package com.example.mvvmcleanarchitectureproject.data.repository.tvshow.datasource
 
 import com.example.mvvmcleanarchitectureproject.data.model.tvshow.TvShow
 

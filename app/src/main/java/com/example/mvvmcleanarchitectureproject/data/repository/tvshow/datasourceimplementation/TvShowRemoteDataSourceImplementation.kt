@@ -1,7 +1,8 @@
-package com.example.mvvmcleanarchitectureproject.data.repository.tvshow
+package com.example.mvvmcleanarchitectureproject.data.repository.tvshow.datasourceimplementation
 
 import com.example.mvvmcleanarchitectureproject.data.api.TMDBApi
 import com.example.mvvmcleanarchitectureproject.data.model.tvshow.TvShowListResponse
+import com.example.mvvmcleanarchitectureproject.data.repository.tvshow.datasource.TvShowRemoteDataSource
 import retrofit2.Response
 
 class TvShowRemoteDataSourceImplementation(

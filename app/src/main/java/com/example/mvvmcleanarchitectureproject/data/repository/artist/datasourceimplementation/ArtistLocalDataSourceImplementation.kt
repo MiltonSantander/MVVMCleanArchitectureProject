@@ -1,7 +1,8 @@
-package com.example.mvvmcleanarchitectureproject.data.repository.artist
+package com.example.mvvmcleanarchitectureproject.data.repository.artist.datasourceimplementation
 
 import com.example.mvvmcleanarchitectureproject.data.db.ArtistDAO
 import com.example.mvvmcleanarchitectureproject.data.model.artist.Artist
+import com.example.mvvmcleanarchitectureproject.data.repository.artist.datasource.ArtistLocalDataSource
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch

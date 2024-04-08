@@ -1,7 +1,8 @@
-package com.example.mvvmcleanarchitectureproject.data.repository.movie
+package com.example.mvvmcleanarchitectureproject.data.repository.movie.datasourceimplementation
 
 import com.example.mvvmcleanarchitectureproject.data.api.TMDBApi
 import com.example.mvvmcleanarchitectureproject.data.model.movie.MovieListResponse
+import com.example.mvvmcleanarchitectureproject.data.repository.movie.datasource.MovieRemoteDataSource
 import retrofit2.Response
 
 class MovieRemoteDataSourceImplementation(
