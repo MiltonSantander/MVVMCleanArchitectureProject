@@ -22,5 +22,4 @@ class MovieLocalDataSourceImplementation(private val movieDao: MovieDAO) : Movie
             movieDao.deleteMovieList()
         }
     }
-
 }
