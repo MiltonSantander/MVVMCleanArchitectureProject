@@ -9,6 +9,6 @@ class ArtistViewModel(
     private val getArtistListUseCase: GetArtistListUseCase,
     private val updateArtistListUseCase: UpdateArtistListUseCase
 ) : ViewModel() {
-    fun getArtist() = liveData { emit(getArtistListUseCase.execute()) }
-    fun updateArtist() = liveData { emit(updateArtistListUseCase.execute()) }
+    fun getArtistList() = liveData { emit(getArtistListUseCase.execute()) }
+    fun updateArtistList() = liveData { emit(updateArtistListUseCase.execute()) }
 }
