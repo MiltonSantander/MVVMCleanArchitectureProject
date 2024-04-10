@@ -3,7 +3,7 @@ package com.example.mvvmcleanarchitectureproject.data.repository.tvshow.datasour
 import com.example.mvvmcleanarchitectureproject.data.model.tvshow.TvShow
 import com.example.mvvmcleanarchitectureproject.data.repository.tvshow.datasource.TvShowCacheDataSource
 
-class tvShowCacheDataSourceImplementation : TvShowCacheDataSource {
+class TvShowCacheDataSourceImplementation : TvShowCacheDataSource {
     private var tvShowList = ArrayList<TvShow>()
     override suspend fun getTvShowListFromCache(): List<TvShow> {
         return tvShowList
