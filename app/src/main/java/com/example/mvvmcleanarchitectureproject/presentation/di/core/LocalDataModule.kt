@@ -1,4 +1,4 @@
-package com.example.mvvmcleanarchitectureproject.presentation.di
+package com.example.mvvmcleanarchitectureproject.presentation.di.core
 
 import com.example.mvvmcleanarchitectureproject.data.db.ArtistDAO
 import com.example.mvvmcleanarchitectureproject.data.db.MovieDAO

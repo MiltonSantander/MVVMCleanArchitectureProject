@@ -1,4 +1,4 @@
-package com.example.mvvmcleanarchitectureproject.presentation.di
+package com.example.mvvmcleanarchitectureproject.presentation.di.core
 
 import com.example.mvvmcleanarchitectureproject.data.repository.artist.datasource.ArtistCacheDataSource
 import com.example.mvvmcleanarchitectureproject.data.repository.artist.datasourceimplementation.ArtistCacheDataSourceImplementation

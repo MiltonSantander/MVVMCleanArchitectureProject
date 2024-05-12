@@ -1,4 +1,4 @@
-package com.example.mvvmcleanarchitectureproject.presentation.di
+package com.example.mvvmcleanarchitectureproject.presentation.di.core
 
 import android.content.Context
 import dagger.Module
