@@ -8,6 +8,7 @@ import com.example.mvvmcleanarchitectureproject.presentation.di.core.AppComponen
 import com.example.mvvmcleanarchitectureproject.presentation.di.core.AppModule
 import com.example.mvvmcleanarchitectureproject.presentation.di.core.DaggerAppComponent
 import com.example.mvvmcleanarchitectureproject.presentation.di.core.NetModule
+import com.example.mvvmcleanarchitectureproject.presentation.di.core.RemoteDataModule
 import com.example.mvvmcleanarchitectureproject.presentation.di.movie.MovieSubComponent
 import com.example.mvvmcleanarchitectureproject.presentation.di.tvshow.TvShowSubComponent
 
@@ -20,6 +21,7 @@ class App : Application(), Injector {
         appComponent = DaggerAppComponent.builder()
             .appModule(AppModule(applicationContext))
             .netModule(NetModule(BuildConfig.BASE_URL))
+            .remoteDataModule(RemoteDataModule(BuildConfig.API_KEY))
             .build()
     }
 
