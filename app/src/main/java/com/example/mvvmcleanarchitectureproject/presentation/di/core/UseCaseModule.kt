@@ -9,8 +9,10 @@ import com.example.mvvmcleanarchitectureproject.domain.usecase.GetTvShowListUseC
 import com.example.mvvmcleanarchitectureproject.domain.usecase.UpdateArtistListUseCase
 import com.example.mvvmcleanarchitectureproject.domain.usecase.UpdateMovieListUseCase
 import com.example.mvvmcleanarchitectureproject.domain.usecase.UpdateTvShowListUseCase
+import dagger.Module
 import dagger.Provides
 
+@Module
 class UseCaseModule {
     @Provides
     fun provideGetMovieListUseCase(movieRepository: MovieRepository): GetMovieListUseCase {
