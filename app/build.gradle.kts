@@ -16,7 +16,10 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-        buildConfigField("String", "API_KEY", "\"TMDB_API_KEY}\"")
+
+        val apiKey = project.findProperty("TMDB_API_KEY") ?: ""
+        buildConfigField("String", "API_KEY", "$apiKey")
+        buildConfigField("String", "BASE_URL", "\"https://api.themoviedb.org/3/\"")
     }
 
     buildTypes {
