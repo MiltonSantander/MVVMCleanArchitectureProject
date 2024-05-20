@@ -2,10 +2,12 @@ package com.example.mvvmcleanarchitectureproject.presentation.movie
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
+import android.view.View
+import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.mvvmcleanarchitectureproject.R
 import com.example.mvvmcleanarchitectureproject.data.model.movie.Movie
 import com.example.mvvmcleanarchitectureproject.databinding.ActivityMovieBinding
@@ -25,8 +27,18 @@ class MovieActivity : AppCompatActivity() {
             .inject(this)
         movieViewModel = ViewModelProvider(this, factory)[MovieViewModel::class.java]
         val responseLiveData: LiveData<List<Movie>?> = movieViewModel.getMovieList()
+        val movieAdapter = MovieAdapter()
+        binding.movieRecyclerView.layoutManager = LinearLayoutManager(this)
+        binding.movieRecyclerView.adapter = movieAdapter
+        binding.movieProgressBar.visibility = View.VISIBLE
         responseLiveData.observe(this) {
-            Log.i("mytag", it.toString())
+            if (it != null) {
+                movieAdapter.setMovieList(it)
+                movieAdapter.notifyDataSetChanged()
+            } else {
+                Toast.makeText(this, "No data available", Toast.LENGTH_LONG).show()
+            }
+            binding.movieProgressBar.visibility = View.GONE
         }
     }
 }
