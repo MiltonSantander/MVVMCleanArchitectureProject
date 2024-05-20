@@ -3,6 +3,8 @@ package com.example.mvvmcleanarchitectureproject.data.model.tvshow
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import androidx.room.TypeConverters
+import com.example.mvvmcleanarchitectureproject.data.db.Converters
 import com.google.gson.annotations.SerializedName
 
 @Entity(tableName = "popular_tvshow")
@@ -21,6 +23,7 @@ data class TvShow(
     @SerializedName("name")
     val name: String?,
     @SerializedName("origin_country")
+    @TypeConverters(Converters::class)
     val originCountry: List<String>?,
     @SerializedName("original_language")
     val originalLanguage: String?,

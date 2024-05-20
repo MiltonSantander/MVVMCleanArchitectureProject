@@ -3,6 +3,8 @@ package com.example.mvvmcleanarchitectureproject.data.model.movie
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import androidx.room.TypeConverters
+import com.example.mvvmcleanarchitectureproject.data.db.Converters
 import com.google.gson.annotations.SerializedName
 
 @Entity(tableName = "popular_movie")
@@ -12,6 +14,7 @@ data class Movie(
     @SerializedName("backdrop_path")
     val backdropPath: String?,
     @SerializedName("genre_ids")
+    @TypeConverters(Converters::class)
     val genreIds: List<Int>?,
     @PrimaryKey
     @SerializedName("id")
