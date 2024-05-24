@@ -14,7 +14,6 @@ import com.example.mvvmcleanarchitectureproject.data.model.tvshow.TvShow
     version = 1,
     exportSchema = false
 )
-@TypeConverters(Converters::class)
 abstract class TMDBDatabase : RoomDatabase() {
     abstract val movieDAO: MovieDAO
     abstract val artistDAO: ArtistDAO

@@ -21,7 +21,7 @@ class MovieActivity : AppCompatActivity() {
     lateinit var factory: MovieViewModelFactory
     private lateinit var movieViewModel: MovieViewModel
     private lateinit var binding: ActivityMovieBinding
-    private lateinit var movieAdapter: MovieAdapter
+    private lateinit var generalPurposeAdapter: GeneralPurposeAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,14 +30,14 @@ class MovieActivity : AppCompatActivity() {
             .inject(this)
         movieViewModel = ViewModelProvider(this, factory)[MovieViewModel::class.java]
         val responseLiveData: LiveData<List<Movie>?> = movieViewModel.getMovieList()
-        movieAdapter = MovieAdapter()
+        generalPurposeAdapter = GeneralPurposeAdapter()
         binding.movieRecyclerView.layoutManager = LinearLayoutManager(this)
-        binding.movieRecyclerView.adapter = movieAdapter
+        binding.movieRecyclerView.adapter = generalPurposeAdapter
         binding.movieProgressBar.visibility = View.VISIBLE
         responseLiveData.observe(this) {
             if (it != null) {
-                movieAdapter.setMovieList(it)
-                movieAdapter.notifyDataSetChanged()
+                generalPurposeAdapter.setList(it)
+                generalPurposeAdapter.notifyDataSetChanged()
             } else {
                 Toast.makeText(this, "No data available", Toast.LENGTH_LONG).show()
             }
@@ -66,8 +66,8 @@ class MovieActivity : AppCompatActivity() {
         val response: LiveData<List<Movie>?> = movieViewModel.getMovieList()
         response.observe(this) {
             if (it != null) {
-                movieAdapter.setMovieList(it)
-                movieAdapter.notifyDataSetChanged()
+                generalPurposeAdapter.setList(it)
+                generalPurposeAdapter.notifyDataSetChanged()
             } else {
                 Toast.makeText(this, "No data available", Toast.LENGTH_LONG).show()
             }
