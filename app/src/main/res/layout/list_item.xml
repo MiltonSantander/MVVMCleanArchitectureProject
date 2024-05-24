@@ -10,7 +10,7 @@
         android:layout_margin="10dp"
         android:clickable="true"
         android:focusable="true"
-        app:cardBackgroundColor="@color/white"
+        app:cardBackgroundColor="@color/purple_500"
         app:cardCornerRadius="10dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -26,7 +26,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="10dp"
                 android:text="TextView"
-                android:textColor="@android:color/background_light"
+                android:textColor="@color/white"
                 android:textSize="30sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -38,7 +38,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:contentDescription="TODO"
                 app:layout_constraintTop_toBottomOf="@+id/title_text_view"
                 tools:srcCompat="@tools:sample/avatars" />
 
@@ -47,8 +46,9 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
+                android:justificationMode="inter_word"
                 android:text="TextView"
-                android:textColor="@android:color/background_light"
+                android:textColor="@color/white"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
