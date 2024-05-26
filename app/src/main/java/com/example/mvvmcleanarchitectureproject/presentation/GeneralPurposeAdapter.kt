@@ -1,4 +1,4 @@
-package com.example.mvvmcleanarchitectureproject.presentation.movie
+package com.example.mvvmcleanarchitectureproject.presentation
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -60,7 +60,7 @@ class GeneralPurposeAdapter() :
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-    ): GeneralPurposeAdapter.ViewHolder {
+    ): ViewHolder {
         return ViewHolder(
             DataBindingUtil.inflate(
                 LayoutInflater.from(parent.context),
@@ -71,7 +71,7 @@ class GeneralPurposeAdapter() :
         )
     }
 
-    override fun onBindViewHolder(holder: GeneralPurposeAdapter.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bind(itemList[position])
     }
 
