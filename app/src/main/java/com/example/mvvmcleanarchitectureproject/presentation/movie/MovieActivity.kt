@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.mvvmcleanarchitectureproject.R
 import com.example.mvvmcleanarchitectureproject.data.model.movie.Movie
 import com.example.mvvmcleanarchitectureproject.databinding.ActivityMovieBinding
+import com.example.mvvmcleanarchitectureproject.presentation.GeneralPurposeAdapter
 import com.example.mvvmcleanarchitectureproject.presentation.di.Injector
 import javax.inject.Inject
 
