@@ -25,21 +25,21 @@ class GeneralPurposeAdapter() :
         val itemData = HashMap<String, String>()
 
         if (item is Movie) {
-            itemData["titleTextView"] = item.title
-            itemData["descriptionTextView"] = item.overview
-            itemData["imageUrl"] = item.posterPath
+            itemData["titleTextView"] = item.title ?: ""
+            itemData["descriptionTextView"] = item.overview ?: ""
+            itemData["imageUrl"] = item.posterPath ?: ""
         }
 
         if (item is Artist) {
-            itemData["titleTextView"] = item.name
+            itemData["titleTextView"] = item.name ?: ""
             itemData["descriptionTextView"] = item.popularity.toString()
-            itemData["imageUrl"] = item.profilePath
+            itemData["imageUrl"] = item.profilePath ?: ""
         }
 
         if (item is TvShow) {
-            itemData["titleTextView"] = item.name
-            itemData["descriptionTextView"] = item.overview
-            itemData["imageUrl"] = item.posterPath
+            itemData["titleTextView"] = item.name ?: ""
+            itemData["descriptionTextView"] = item.overview ?: ""
+            itemData["imageUrl"] = item.posterPath ?: ""
         }
 
         return itemData

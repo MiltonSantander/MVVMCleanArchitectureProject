@@ -11,11 +11,11 @@ data class TvShow(
     @SerializedName("id")
     val id: Int?,
     @SerializedName("name")
-    var name: String = "",
+    var name: String? = "",
     @SerializedName("overview")
-    var overview: String = "",
+    var overview: String? = "",
     @SerializedName("popularity")
     val popularity: Double?,
     @SerializedName("poster_path")
-    var posterPath: String = "",
+    var posterPath: String? = "",
 )

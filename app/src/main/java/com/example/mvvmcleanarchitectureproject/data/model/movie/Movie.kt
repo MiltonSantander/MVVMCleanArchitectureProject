@@ -11,11 +11,11 @@ data class Movie(
     @SerializedName("id")
     val id: Int?,
     @SerializedName("overview")
-    var overview: String = "",
+    var overview: String? = "",
     @SerializedName("popularity")
     val popularity: Double?,
     @SerializedName("poster_path")
-    var posterPath: String = "",
+    var posterPath: String? = "",
     @SerializedName("title")
-    var title: String = "",
+    var title: String? = "",
 )
